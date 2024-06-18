@@ -2,10 +2,39 @@
 
 //1) Define and initialize the arrays specified in the exercise to hold the name, chemical symbol and mass for different elements.
 
+let element1 = ['hydrogen', 'H', 1.008];
+let element2 = ['helium', 'He', 4.003];
+let element26 = ['iron', 'Fe', 55.85];
+
 //2) Define the array 'table', and use 'push' to add each of the element arrays to it. Print 'table' to see its structure.
+
+let table = [];
+table.push(element1, element2, element26);
+console.log(table);
 
 //3) Use bracket notation to examine the difference between printing 'table' with one index vs. two indices (table[][]).
 
+console.log(table[1]); //Prints full array of what is indexed at table[1], kind of like printing a whole specific page.
+console.log(table[1][1]); //Prints only what is located at index [1] of the array located at table[1], kind of like printing only a specific word from a specific page.
+
 //4) Using bracket notation and the table array, print the mass of element1, the name for element 2 and the symbol for element26.
 
+console.log(table[0][2], table[1][0], table[2][1]);
+
 //5) 'table' is an example of a 2-dimensional array. The first “level” contains the element arrays, and the second level holds the name/symbol/mass values. Experiment! Create a 3-dimensional array and print out one entry from each level in the array.
+
+let atwoodM = ["Alias", "Handmaid's", "Testaments"];
+let boyleTC = ["Skies", "Tortilla", "Water", "Wellville"];
+let smithZ = ["Beauty", "Fraud", "Teeth"];
+let boyntonS = ["Barnyard", "Hippo", "Pajama"];
+let carleE = ["Caterpillar", "Crab", "Ladybug", "Spider"];
+let lionniL = ["Cat", "Chameleon", "Hat"];
+let chastR = ["Hate", "Pleasant", "Town"];
+let sedarisD = ["Holiday", "Naked", "Pretty"];
+let westL = ["Actually", "Shrill", "Witches"];
+let fiction = [atwoodM, boyleTC, smithZ];
+let childrens = [boyntonS, carleE, lionniL];
+let humor = [chastR, sedarisD, westL];
+let library = [fiction, childrens, humor];
+
+console.log(library[2][0][1], library[1][1][0], library[0][2][2]);

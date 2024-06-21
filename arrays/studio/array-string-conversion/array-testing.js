@@ -10,6 +10,15 @@ function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
 	let check;
 	let output;
+	protoArray1 = protoArray1.split(",");
+	protoArray2 = protoArray2.split(";");
+	protoArray3 = protoArray3.split(" ");
+	protoArray4 = protoArray4.split(", ");
+	console.log(protoArray1);
+	console.log(protoArray2);
+	console.log(protoArray3);
+	console.log(protoArray4);
+
 	//TODO: 2. write the code required for this step
 
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.

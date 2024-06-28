@@ -21,8 +21,31 @@ function holdStatus(arr){
 let fuelLevel = 200000;
 let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold', 'water', 'AE-35 unit'];
 
+let nothingToSeeHere = function(fuelLevel){
+  let flask = 0;
+  while (fuelLevel > 100001){
+    fuelLevel = fuelLevel - 100000;
+    flask = flask + 100000;
+  }
+  return flask;
+};
+console.log(nothingToSeeHere(fuelLevel));
+
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
+
+let lookASquirrel = function(cargoHold){
+  let satchel = cargoHold.splice(3,2,"carrot","turnip");
+  return satchel;
+};
+
+function irs(fuelLevel, cargoHold){
+  fuelTaken = nothingToSeeHere(fuelLevel);
+  satchelReport = lookASquirrel(cargoHold);
+  return `Raided ${fuelTaken} kg of fuel from the tanks, and stole ${satchelReport[0]} and ${satchelReport[1]} from the cargo hold.`;
+}
+
+console.log(irs(fuelLevel, cargoHold));
 
 /* Steal some fuel from the shuttle:
  * /
@@ -53,5 +76,4 @@ console.log("Hold status: " + holdStatus(cargoHold));
 	
 //b). Call your anonymous fuel and cargo functions from within irs.
 
-//c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
+//c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."/*/

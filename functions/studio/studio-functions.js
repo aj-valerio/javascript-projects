@@ -3,6 +3,21 @@
 // Part One: Reverse Characters
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
+function reverseCharacters(toReverse){
+    if (typeof toReverse === "string"){
+         toReverse = toReverse.split("").reverse().join("");
+         return toReverse;
+    } else if (typeof toReverse === "number"){
+        toReverse = toReverse.toString().split("").reverse().join("");
+         return toReverse;
+    }
+    
+}
+let myString = "This is a string";
+let myNumber = 123456;
+console.log(reverseCharacters(myNumber));
+
+
 // 2. Within the function, split the string into an array, then reverse the array.
 // 3. Use join to create the reversed string and return that string from the function.
 // 4. Below the function, define and initialize a variable to hold a string.
@@ -26,17 +41,49 @@
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
+// let array1 = [];
+// function reverseArray(array1){
+//     for (i = 0; i < array1.length; i++){
+//         array1 = array1.shift().reverseCharacters(array1).push();
+//         array1 = array1.reverse();
+//     }
+//     return array1;
+// }
+function reverseCharAndArr(inputArray){
+    let newCharandArr = [];
+    for (i = 0; i < inputArray.length; i++){
+         newCharandArr = inputArray;
+         newCharandArr = newCharandArr.toString(',');
+         newCharandArr = reverseCharacters(newCharandArr);
+         newCharandArr = newCharandArr.split(',');
+         
+       }
+       return newCharandArr;
+    }
+
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
-
+console.log(reverseCharAndArr(arrayTest3));
 // Bonus Missions
 
 // 1. Have a clear, descriptive name like funPhrase.
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
-
+let phrase = "Emily is so super helpful today!";
+function funPhrase(phrase){
+    let empty1 = "";
+    let empty2 = "";
+    let phraseArray = phrase.split(" ");
+    for (i = 0; i < phraseArray.length; i++){
+        if (phraseArray[i].length <= 3){
+            empty1 += phraseArray[i].slice()
+        }
+    }
+    return phraseArray
+}
+console.log(funPhrase(phrase));
 // Test Function
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').

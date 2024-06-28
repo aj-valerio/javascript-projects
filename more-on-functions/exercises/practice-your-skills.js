@@ -10,6 +10,7 @@ let tripleOrPirate = function(entry1) {
     }
 };
 
+
 console.log(tripleOrPirate(17000));
 
 /* Your function should:

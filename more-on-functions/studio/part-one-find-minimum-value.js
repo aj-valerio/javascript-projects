@@ -5,6 +5,16 @@ let nums1 = [5, 10, 2, 42];
 let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
 let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 
+let findMinValue = function(numsArray){
+    let minimumValue = numsArray[0];
+    for (i = 1; i < numsArray.length; i++){
+        if (numsArray[i] < minimumValue){
+            minimumValue = numsArray[i];
+        }
+    }
+    return minimumValue;
+}
+
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
 
-console.log(/* your code here */);
+console.log(findMinValue(nums3));
